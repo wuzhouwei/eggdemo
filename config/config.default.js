@@ -17,21 +17,21 @@ module.exports = appInfo => {
 
   //jwt
   config.jwt = {
-    secret:'破解,来啊' //自定义加密字符
+    secret: '破解,来啊' //自定义加密字符
   }
 
   // add your middleware config here
-  config.middleware = [ 'token' ];
+  config.middleware = [];
   //set cors
   config.security = {
     csrf: {
       enable: false, // 前后端分离，post请求不方便携带_csrf
       ignoreJSON: true
     },
-    domainWhiteList:['http://localhost:8080'] //配置白名单
+    domainWhiteList: ['http://localhost:8080'] //配置白名单
   };
   config.cors = {
-    origin:'*',//允许所有跨域访问，注释掉则允许上面 白名单 访问
+    origin: '*',//允许所有跨域访问，注释掉则允许上面 白名单 访问
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
 

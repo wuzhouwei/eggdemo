@@ -6,9 +6,9 @@
 
 module.exports = app => {
   const { router, controller } = app;
-  console.log(controller,'controller');
+  console.log(controller, 'controller');
   const token = app.middleware.token();
-  router.get('/login', controller.login);
+  router.get('/login', controller.login.index);
   router.get('/', controller.home.index);
- 
+
 };
